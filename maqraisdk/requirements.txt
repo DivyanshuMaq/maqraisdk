@@ -1,0 +1,12 @@
+# Uncomment to enable Azure Monitor OpenTelemetry
+# Ref: aka.ms/functions-azure-monitor-python
+# azure-monitor-opentelemetry
+
+azure-functions==1.23.0
+crewai[tools]==0.120.1
+types-PyYAML==6.0.12.20250516
+PyYAML==6.0.2
+onnxruntime==1.22.0
+appinsights==0.13.0
+openai>=1.0.0
+pydantic_core==2.41.4
