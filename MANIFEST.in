@@ -1,0 +1,14 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include rai_agent *.py
+recursive-exclude rai_agent __pycache__
+recursive-exclude rai_agent *.pyc
+recursive-exclude rai_agent *.pyo
+exclude main.py
+exclude host.json
+exclude local.settings.json
+exclude Application_insights.py
+exclude exception.py
+recursive-exclude Reviewer_updater *
+recursive-exclude Testcase_generator *

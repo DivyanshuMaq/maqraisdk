@@ -1,25 +1,24 @@
 """
-rai_agent package
-This package provides tools and components for managing AI agent workflows, including connections to language models, agent definitions, task management, crew organization, and utility functions for prompt review and updates.
-Modules imported:
-- connections: Contains OpenAIClient for OpenAI API interactions and CustomLLM for enhanced language model functionality.
-- utility: Offers PromptReviewer for reviewing prompts and PromptUpdater for updating prompts.
+MAQ RAI SDK - A Python SDK for Responsible AI compliance in prompt engineering.
 
+This package provides tools for reviewing, updating, and testing AI prompts
+to ensure compliance with Responsible AI principles including:
+- Groundedness
+- XPIA (Cross-Prompt Injection Attack) prevention  
+- Jailbreak prevention
+- Harmful content prevention
 """
 
-from .connections import (
-    OpenAIClient,  # Import OpenAIClient for OpenAI API interactions
-)
+from .rai_agent.connections.open_ai import OpenAIClient
+from .rai_agent.utility.promptReviewer import PromptReviewer
+from .rai_agent.utility.promptUpdater import PromptUpdater
+from .rai_agent.utility.promptTestcaseGenerator import promptTestcaseGenerator
 
-from .utility import (
-    PromptReviewer,  # Import PromptReviewer for reviewing prompts
-    PromptUpdater,  # Import PromptUpdater for updating prompts
-    promptTestcaseGenerator, 
-)
+__version__ = "0.1.0"
 
-__all__: list[str] = [
-    "OpenAIClient",  # Specify OpenAIClient for export
-    "PromptReviewer",  # Specify PromptReviewer for export
-    "PromptUpdater",  # Specify PromptUpdater for export
-    "promptTestcaseGenerator",  # Specify promptTestcaseGenerator for export
-]  # Specify what is exported from this module
+__all__ = [
+    "OpenAIClient",
+    "PromptReviewer", 
+    "PromptUpdater",
+    "promptTestcaseGenerator",
+]
